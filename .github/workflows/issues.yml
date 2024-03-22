@@ -1,0 +1,13 @@
+name: issue action manager
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  show:
+    name: show issues
+    runs-on: ubuntu-latest
+    steps:
+      - name: show github event (issue)
+        run: echo "issue ${{toJSON(github.event)}}"
