@@ -8,6 +8,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: pull code from repo
+        uses: actions/checkout
       - name: install dependencies
         run: npm install
       - name: lint code
